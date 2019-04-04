@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  productID: MyString
+  name: MyString
+  description: MyString
+  price: 
+  category: MyString
+
+two:
+  productID: MyString
+  name: MyString
+  description: MyString
+  price: 
+  category: MyString

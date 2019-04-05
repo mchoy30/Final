@@ -1,0 +1,11 @@
+<div class="product">
+  <%if show_links%>
+  <h3><%= link_to product.name, product %> </h3>
+  <% else %>
+  <h3><%= product.name %>  </h3>
+   <% end %>
+
+   <p>Category: <% product.category.name %></p>
+   <p>Price: <% number_to_currency product.price %></p>
+   <p> <% product.image %></p>
+</div>

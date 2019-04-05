@@ -39,7 +39,7 @@ gem 'activeadmin'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'bootstrap'
+gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 
 group :development, :test do

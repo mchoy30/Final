@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Products</h1>
-
+<% paginate @products%>
 
 <table>
   <thead>
@@ -34,6 +34,8 @@
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+
+    <%= paginate @products%>
   </tbody>
 </table>
 

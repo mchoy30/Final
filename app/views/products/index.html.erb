@@ -21,7 +21,7 @@
 
         <td><%= link_to product.name, product %></td>
         <td><%= product.description %></td>
-        <td><%= product.price %></td>
+        <td><%= number_to_currency product.price %></td>
         <td><%= product.category.name %></td>
         <% if product.image?%>
         <td><%= image_tag product.image.thumb.url %></td>

@@ -11,10 +11,17 @@
 
   <body>
      <nav class="navbar navbar-light bg-light">
-
     <a class="navbar-brand" href= "/products/" >Products</a>
     <a class="navbar-brand" href="/abouts/">About</a>
+
+    <%= form_tag(search_results_path, method: "get") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+    <% end %>
   </nav>
+
+
 
     <%= yield %>
   </body>

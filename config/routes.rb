@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :products
-
+  resource :cart, only: [:show]
+  resources :order_items, only: %i[create update destroy]
   root to: 'products#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

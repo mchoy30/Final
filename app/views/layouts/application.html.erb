@@ -31,6 +31,9 @@
     <%= form_tag(search_results_path, method: "get") do %>
     <%= label_tag(:q, "Search for:") %>
     <%= text_field_tag(:q) %>
+
+
+    <%= select_tag(:test ,"test") %>
     <%= submit_tag("Search") %>
     <% end %>
   </nav>
@@ -45,6 +48,8 @@
       </div>
     </div>
     <hr>
+    <p class="notice"> <%="notice"%></p>
+    <p class="alert"> <%="alert"%></p>
     <%= yield %>
   </div>
 

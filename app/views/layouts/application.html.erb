@@ -9,7 +9,6 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <%# from cart example %>
-        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
       <% if request.ssl? %>
         <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
         <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
@@ -33,10 +32,13 @@
     <%= text_field_tag(:q) %>
 
 
-    <%= select_tag(:test ,"test") %>
-    <%= options_for_select([['Lisbon', 1], ['Madrid', 2]]) %>
+
+    <%= select_tag(:category ,options_from_collection_for_select(myCategories, 'id', 'name') ) %>
+
     <%= submit_tag("Search") %>
     <% end %>
+
+
   </nav>
 
  <div class="container">

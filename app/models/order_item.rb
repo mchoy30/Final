@@ -14,7 +14,7 @@ class OrderItem < ActiveRecord::Base
     if persisted?
       self[:unit_price]
     else
-      product.price
+      product.price.to_f
     end
   end
 
